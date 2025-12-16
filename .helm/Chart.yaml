@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: 0.0.0
+type: application
+description: Custom Resource Definitions for Arcane
+maintainers:
+  - email: esdsupport@ecco.com
+    name: ECCO Data & AI
+name: arcane-crd
+version: 0.0.0

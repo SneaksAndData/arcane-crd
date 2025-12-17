@@ -4,17 +4,17 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.19.0
-  name: stream-classes.streaming.sneaksanddata.com
+  name: streamclasses.streaming.sneaksanddata.com
 spec:
   group: streaming.sneaksanddata.com
   names:
     kind: StreamClass
     listKind: StreamClassList
-    plural: stream-classes
+    plural: streamclasses
     shortNames:
     - sc
-    singular: stream-class
-  scope: Namespaced
+    singular: streamclass
+  scope: Cluster
   versions:
   - name: v1
     schema:

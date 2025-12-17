@@ -4,16 +4,16 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.19.0
-  name: streaming-job-templates.streaming.sneaksanddata.com
+  name: streamingjobtemplates.streaming.sneaksanddata.com
 spec:
   group: streaming.sneaksanddata.com
   names:
     kind: StreamingJobTemplate
     listKind: StreamingJobTemplateList
-    plural: streaming-job-templates
+    plural: streamingjobtemplates
     shortNames:
     - sjt
-    singular: streaming-job-template
+    singular: streamingjobtemplate
   scope: Namespaced
   versions:
   - name: v1

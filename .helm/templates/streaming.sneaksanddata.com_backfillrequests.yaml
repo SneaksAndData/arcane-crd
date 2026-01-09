@@ -4,22 +4,22 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.19.0
-  name: streamclasses.streaming.sneaksanddata.com
+  name: backfillrequests.streaming.sneaksanddata.com
 spec:
   group: streaming.sneaksanddata.com
   names:
-    kind: StreamClass
-    listKind: StreamClassList
-    plural: streamclasses
+    kind: BackfillRequest
+    listKind: BackfillRequestList
+    plural: backfillrequests
     shortNames:
-    - sc
-    singular: streamclass
-  scope: Cluster
+    - bfr
+    singular: backfillrequest
+  scope: Namespaced
   versions:
   - name: v1
     schema:
       openAPIV3Schema:
-        description: StreamClass is the Schema for the stream class API
+        description: BackfillRequest is the Schema for the backfill request API
         properties:
           apiVersion:
             description: |-
@@ -39,42 +39,26 @@ spec:
           metadata:
             type: object
           spec:
-            description: StreamClassSpec defines the desired state of a stream class
-              to watch
+            description: BackfillRequestSpec defines the desired state of a backfill
+              request
             properties:
-              apiGroupRef:
-                description: APIGroupRef is the api group of the stream class to watch
-                  for
+              completed:
+                description: Completed indicates whether the backfill request has
+                  been completed
+                type: boolean
+              streamClass:
+                description: StreamClass is the name of the stream class to backfill
                 type: string
-              apiVersion:
-                description: APIVersion is the API version of the stream class to
-                  watch for
+              streamId:
+                description: StreamId is the ID of the stream to backfill
                 type: string
-              kindRef:
-                description: KindRef is the kind of the stream class to watch for
-                type: string
-              namespace:
-                description: TargetNamespace is the namespace where streaming jobs
-                  will be created
-                type: string
-              pluralName:
-                description: PluralName is the plural name of the stream class to
-                  watch for
-                type: string
-              secretRefs:
-                description: SecretRefs is a list of fields to be extracted from the
-                  secret
-                items:
-                  type: string
-                type: array
             required:
-            - apiVersion
-            - kindRef
-            - pluralName
+            - streamClass
+            - streamId
             type: object
           status:
-            description: StreamClassStatus defines the observed state of a stream
-              class
+            description: BackfillRequestStatus defines the observed state of a backfill
+              request
             properties:
               conditions:
                 description: Conditions represent the latest available observations
@@ -134,7 +118,7 @@ spec:
                   type: object
                 type: array
               phase:
-                description: Phase represents the current phase of the stream class
+                description: Phase represents the current phase of the backfill request
                 enum:
                 - INITIALIZING
                 - READY

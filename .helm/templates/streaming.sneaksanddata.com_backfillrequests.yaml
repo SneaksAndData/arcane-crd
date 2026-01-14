@@ -120,10 +120,10 @@ spec:
               phase:
                 description: Phase represents the current phase of the backfill request
                 enum:
-                - INITIALIZING
-                - READY
-                - FAILED
-                - STOPPED
+                - Pending
+                - Ready
+                - Failed
+                - Stopped
                 type: string
             type: object
         type: object

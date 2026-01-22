@@ -20,8 +20,8 @@ spec:
     - jsonPath: .spec.spec.template.spec.containers[0].resources.limits.memory
       name: MemoryLimit
       type: string
-    - jsonPath: .spec.spec.template.spec.containers[0].resources.requests.cpu
-      name: CPURequest
+    - jsonPath: .spec.spec.template.spec.containers[0].resources.limits.cpu
+      name: CpuLimit
       type: string
     - jsonPath: .spec.spec.template.spec.containers[0].image
       name: Image

@@ -17,10 +17,10 @@ spec:
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
-    - jsonPath: .status.streamClass
+    - jsonPath: .spec.streamClass
       name: StreamClass
       type: string
-    - jsonPath: .status.streamId
+    - jsonPath: .spec.streamId
       name: StreamId
       type: string
     - jsonPath: .status.phase

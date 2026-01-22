@@ -16,7 +16,14 @@ spec:
     singular: backfillrequest
   scope: Namespaced
   versions:
-  - name: v1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.streamClass
+      name: StreamClass
+      type: string
+    - jsonPath: .spec.streamId
+      name: StreamId
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: BackfillRequest is the Schema for the backfill request API

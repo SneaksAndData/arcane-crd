@@ -16,7 +16,23 @@ spec:
     singular: streamclass
   scope: Cluster
   versions:
-  - name: v1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.apiGroupRef
+      name: ApiGroupRef
+      type: string
+    - jsonPath: .spec.apiVersion
+      name: ApiVersion
+      type: string
+    - jsonPath: .spec.kindRef
+      name: KindRef
+      type: string
+    - jsonPath: .spec.pluralName
+      name: PluralName
+      type: string
+    - jsonPath: .status.phase
+      name: Phase
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: StreamClass is the Schema for the stream class API

@@ -69,10 +69,6 @@ spec:
               kindRef:
                 description: KindRef is the kind of the stream class to watch for
                 type: string
-              namespace:
-                description: TargetNamespace is the namespace where streaming jobs
-                  will be created
-                type: string
               pluralName:
                 description: PluralName is the plural name of the stream class to
                   watch for

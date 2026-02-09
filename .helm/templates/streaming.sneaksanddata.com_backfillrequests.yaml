@@ -53,6 +53,7 @@ spec:
               request
             properties:
               completed:
+                default: false
                 description: Completed indicates whether the backfill request has
                   been completed
                 type: boolean

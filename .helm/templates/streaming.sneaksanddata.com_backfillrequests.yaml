@@ -140,6 +140,7 @@ spec:
         type: object
     selectableFields:
     - jsonPath: .spec.completed
+    - jsonPath: .spec.streamId
     served: true
     storage: true
     subresources:

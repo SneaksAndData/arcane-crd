@@ -58,9 +58,9 @@ spec:
                   been completed
                 type: boolean
               payload:
-                default: nil
-                description: Payload is an unstructured JSON object with arbitrary
-                  nesting.
+                description: |-
+                  Payload is an unstructured JSON object with arbitrary nesting. This is used to generate the
+                  `STREAMCONTEXT_OVERRIDE` environment variable for the backfill job. The payload is optional and can be nil.
                 nullable: true
                 type: object
                 x-kubernetes-preserve-unknown-fields: true

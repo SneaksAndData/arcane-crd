@@ -57,6 +57,13 @@ spec:
                 description: Completed indicates whether the backfill request has
                   been completed
                 type: boolean
+              payload:
+                default: nil
+                description: Payload is an unstructured JSON object with arbitrary
+                  nesting.
+                nullable: true
+                type: object
+                x-kubernetes-preserve-unknown-fields: true
               streamClass:
                 description: StreamClass is the name of the stream class to backfill
                 type: string

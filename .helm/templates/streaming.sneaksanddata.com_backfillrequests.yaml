@@ -57,6 +57,13 @@ spec:
                 description: Completed indicates whether the backfill request has
                   been completed
                 type: boolean
+              payload:
+                description: |-
+                  Payload is an unstructured JSON object with arbitrary nesting. This is used to generate the
+                  `STREAMCONTEXT_OVERRIDE` environment variable for the backfill job. The payload is optional and can be nil.
+                nullable: true
+                type: object
+                x-kubernetes-preserve-unknown-fields: true
               streamClass:
                 description: StreamClass is the name of the stream class to backfill
                 type: string

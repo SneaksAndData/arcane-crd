@@ -69,6 +69,13 @@ spec:
               kindRef:
                 description: KindRef is the kind of the stream class to watch for
                 type: string
+              overridableFields:
+                description: OverridableFields is a nullable list of fields that can
+                  be overridden by stream definitions
+                items:
+                  type: string
+                nullable: true
+                type: array
               pluralName:
                 description: PluralName is the plural name of the stream class to
                   watch for

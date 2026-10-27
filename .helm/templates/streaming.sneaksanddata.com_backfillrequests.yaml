@@ -52,6 +52,14 @@ spec:
             description: BackfillRequestSpec defines the desired state of a backfill
               request
             properties:
+              backfillType:
+                default: data
+                description: BackfillType indicates the type of backfill request,
+                  either "data" or "migration"
+                enum:
+                - data
+                - migration
+                type: string
               completed:
                 default: false
                 description: Completed indicates whether the backfill request has
